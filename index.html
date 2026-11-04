@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#080c16">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Dheena Dhayalan | Reliability, cloud & creative work">
+  <meta property="og:description" content="Site Reliability Engineer building resilient cloud platforms, useful applications and visual stories.">
+  <title>Dheena Dhayalan — Reliability, cloud & creative work</title>
+  <meta name="description" content="Dheena Dhayalan is a Site Reliability Engineer based in India with 3 years of experience in AWS, observability, incident management and automation, plus an app builder, photographer and filmmaker.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+  <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+
+  <header class="nav" id="nav">
+    <a class="brand" href="#home" aria-label="Dheena Dhayalan, back to top">
+      <span class="brand-mark" aria-hidden="true">D</span><span class="brand-txt">Dheee</span>
+    </a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+    <nav id="menu" aria-label="Primary">
+      <div class="links" id="links">
+        <span class="pill" id="pill" aria-hidden="true"></span>
+        <a href="#about" data-spy="about">About</a>
+        <a href="#explore" data-spy="career" data-open="career">Career</a>
+        <a href="#explore" data-spy="personal" data-open="personal">Personal</a>
+        <a href="#connect" data-spy="connect">Connect</a>
+        <a href="#contact" data-spy="contact">Contact</a>
+      </div>
+      <a class="btn btn-solid btn-sm" href="resume.pdf" target="_blank" rel="noopener">View Resume</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HOME -->
+    <section class="hero" id="home" data-section>
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="live-dot"></span>Site Reliability Engineer &middot; India</p>
+          <h1 class="name" id="heroName" tabindex="0" aria-label="Dheena Dhayalan">
+            <span class="nm-base" aria-hidden="true">Dhee</span><span class="nm-e" aria-hidden="true">e</span><span class="nm-rest" id="nmRest" aria-hidden="true">na&nbsp;Dhayalan</span>
+          </h1>
+          <p class="hint" id="nameHint">Hover over the name</p>
+          <div class="hero-body">
+            <p class="hero-sub">I keep high-traffic streaming platforms fast, observable and online. When the pager is quiet, I build apps, shoot photos and video, and write scripts.</p>
+            <div class="hero-actions">
+              <a class="btn btn-solid magnetic" href="resume.pdf" target="_blank" rel="noopener">View Resume</a>
+              <a class="btn btn-line btn-mail magnetic" href="#contact" aria-label="Get in touch, go to the contact section">
+                <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M4 7l8 6 8-6"/></svg>
+                <span>Get in touch</span>
+              </a>
+            </div>
+            <ul class="facts">
+              <li><b data-count="3" data-suffix="+">0</b><span>years in SRE</span></li>
+              <li><b data-count="4" data-suffix="+">0</b><span>apps built</span></li>
+              <li><b data-count="0" data-suffix="">0</b><span>critical outages, ACC 2025</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <aside class="panel glass" aria-label="Reliability snapshot">
+          <header class="panel-head">
+            <div><small>Client</small><strong>Sony LIV &middot; ACC 2025 live cricket</strong></div>
+            <span class="badge"><i></i>Zero critical outages</span>
+          </header>
+          <div class="chart">
+            <div class="chart-label"><span>Traffic</span><em>3&ndash;5&times; baseline</em></div>
+            <svg viewBox="0 0 400 90" preserveAspectRatio="none" role="img" aria-label="Illustration: traffic spikes to three to five times baseline">
+              <defs><linearGradient id="gT" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--indigo)" stop-opacity=".45"/><stop offset="1" stop-color="var(--indigo)" stop-opacity="0"/></linearGradient></defs>
+              <path class="area" d="M0 78 C40 78 70 76 100 74 C140 70 150 20 200 14 C250 8 270 18 300 40 C330 62 360 72 400 76 L400 90 L0 90Z" fill="url(#gT)"/>
+              <path class="draw" d="M0 78 C40 78 70 76 100 74 C140 70 150 20 200 14 C250 8 270 18 300 40 C330 62 360 72 400 76" fill="none" stroke="var(--indigo)" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="chart">
+            <div class="chart-label"><span>API response time</span><em>under 500 ms</em></div>
+            <svg viewBox="0 0 400 90" preserveAspectRatio="none" role="img" aria-label="Illustration: API response time stays under the 500 millisecond line">
+              <line x1="0" y1="26" x2="400" y2="26" stroke="var(--warm)" stroke-width="1.5" stroke-dasharray="5 6" opacity=".8"/>
+              <path class="draw" d="M0 62 C30 60 50 66 80 62 C110 58 130 64 160 60 C190 56 200 66 230 61 C260 56 290 64 320 60 C350 57 375 62 400 60" fill="none" stroke="var(--mint)" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <footer class="panel-foot">Illustration of the result, based on my work on the platform.</footer>
+        </aside>
+      </div>
+      <a class="scroll-cue" href="#about" aria-label="Scroll to About"><span></span></a>
+    </section>
+
+    <div class="marquee" aria-hidden="true"><div class="marquee-track" id="marquee"></div></div>
+
+    <!-- ABOUT -->
+    <section class="section" id="about" data-section>
+      <div class="wrap">
+        <header class="sec-head"><p class="kicker">About</p><h2 class="h2">Reliable systems, built with a creative eye.</h2></header>
+        <div class="about-grid">
+          <div class="about-copy rv">
+            <p class="big">I am a Site Reliability Engineer with three years of experience keeping high-traffic cloud platforms available, observable and fast.</p>
+            <p>My work is production monitoring, incident response and root cause analysis across distributed AWS environments. I define and track SLIs and SLOs, tune alert thresholds so teams hear about real problems first, and support releases so go-lives stay clean.</p>
+            <p>I also bring a security-minded view from SIEM-based monitoring and log pipeline work in a SOC, and I build full applications of my own with AI support. Away from the screen I shoot photography and video, write scripts and edit.</p>
+          </div>
+          <div class="about-side">
+            <ul class="info rv">
+              <li><small>Based in</small><span>India</span></li>
+              <li><small>Email</small><a href="mailto:deenadayalan779@gmail.com">deenadayalan779@gmail.com</a></li>
+              <li><small>Role</small><span>Site Reliability Engineer</span></li>
+              <li><small>Education</small><span>B.Tech Information Technology</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPLORE: two boxes that open the full story -->
+    <section class="section alt" id="explore" data-section>
+      <div class="wrap">
+        <header class="sec-head"><p class="kicker">Explore</p><h2 class="h2">Two sides of me. Pick one to open.</h2>
+          <p class="lede">Select a box to see the full story behind it.</p></header>
+
+        <div class="duo">
+          <article class="path path-career glow" id="boxCareer" data-key="career">
+            <span class="path-ico" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="3"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"/></svg></span>
+            <h3>Professional Career</h3>
+            <p>Three years as a Site Reliability Engineer on the Sony LIV OTT platform: monitoring, incidents, automation and AWS.</p>
+            <ul class="path-meta"><li>SRE</li><li>AWS</li><li>Observability</li><li>CI/CD</li><li>Certifications</li></ul>
+            <button class="path-btn" type="button" aria-expanded="false" aria-controls="drawerCareer"><span>Full Experiences</span><i class="chev" aria-hidden="true"></i></button>
+          </article>
+
+          <article class="path path-personal glow" id="boxPersonal" data-key="personal">
+            <span class="path-ico" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><path d="M19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8z"/></svg></span>
+            <h3>Beyond the Job</h3>
+            <p>The apps I built, what I am learning, and the lifestyle, hobbies and interests that shape how I work.</p>
+            <ul class="path-meta"><li>4 apps</li><li>Vibe coding</li><li>Photography</li><li>Filmmaking</li><li>Travel</li></ul>
+            <button class="path-btn" type="button" aria-expanded="false" aria-controls="drawerPersonal"><span>Personal Development</span><i class="chev" aria-hidden="true"></i></button>
+          </article>
+        </div>
+
+        <!-- CAREER DRAWER -->
+        <section class="drawer" id="drawerCareer" aria-label="Professional career">
+          <div class="drawer-inner"><div class="drawer-body">
+            <div class="drawer-head">
+              <div><p class="kicker">Professional career</p><h3 class="h2">Full experience</h3>
+                <p class="lede">Site Reliability Engineer &middot; Sony LIV OTT platform &middot; September 2023 to present</p></div>
+              <button class="close" type="button" data-close>Close</button>
+            </div>
+
+            <h4 class="blk">Work experience</h4>
+            <div class="exp">
+              <div class="tabs" role="tablist" aria-label="Areas of work" id="expTabs"></div>
+              <div class="exp-panel glass" id="expPanel" role="tabpanel" aria-live="polite"></div>
+            </div>
+            <aside class="award rv">
+              <div class="award-ico" aria-hidden="true"></div>
+              <div>
+                <small>Key achievement</small>
+                <h3>Team Excellence Award with CEO Appreciation</h3>
+                <p>Recognised for keeping the platform reliable during ACC 2025 live cricket streaming, sustaining high availability for millions of concurrent users with zero critical outages.</p>
+              </div>
+            </aside>
+
+            <h4 class="blk">Reliability toolkit</h4>
+            <div class="bento">
+              <article class="tile glow rv span2">
+                <h3>Incident management</h3>
+                <p>Triage, on-call, escalation and root cause analysis, from first alert to written postmortem.</p>
+                <ul class="chips"><li>SLA definition &amp; tracking</li><li>Error budgets</li><li>Incident triage</li><li>On-call support</li><li>Root cause analysis</li><li>Escalation management</li><li>High availability</li></ul>
+              </article>
+              <article class="tile glow rv">
+                <h3>Observability &amp; monitoring</h3>
+                <p>Dashboards and alerts that show the health of the whole platform in one view.</p>
+                <ul class="chips"><li>Grafana</li><li>Datadog</li><li>Coralogix</li><li>CloudWatch</li><li>Squadcast</li><li>Alert threshold tuning</li><li>Log aggregation</li><li>Metrics visualization</li></ul>
+              </article>
+              <article class="tile glow rv">
+                <h3>CI/CD &amp; automation</h3>
+                <p>Pipeline validation, hotfix and release support, and scripts that remove repetitive work.</p>
+                <ul class="chips"><li>CI/CD pipeline validation</li><li>Hotfix &amp; release support</li><li>Terraform</li><li>Ansible</li><li>Python</li><li>Bash</li></ul>
+              </article>
+              <article class="tile glow rv">
+                <h3>Systems &amp; networking</h3>
+                <p>Hands-on with the servers and network layers behind a streaming service.</p>
+                <ul class="chips"><li>Linux CLI</li><li>Windows Server</li><li>DNS</li><li>Load balancing</li><li>IIS</li><li>Apache Tomcat</li></ul>
+              </article>
+              <article class="tile glow rv">
+                <h3>Tools</h3>
+                <p>Where incidents, tickets and API checks live.</p>
+                <ul class="chips"><li>Postman</li><li>ServiceNow</li><li>JIRA</li><li>Blitz</li><li>Bolt Service</li></ul>
+              </article>
+            </div>
+
+            <h4 class="blk">Cloud infrastructure on AWS</h4>
+            <div class="aws rv" id="aws">
+              <div class="aws-head">
+                <h3 class="h3">AWS, laid out as a request path</h3>
+                <p>Select a service to see how I work with it. The path follows a request from the viewer to the database, with monitoring watching every step.</p>
+              </div>
+              <ol class="flow" id="awsFlow"></ol>
+              <div class="aws-detail glass" id="awsDetail" aria-live="polite"></div>
+              <div class="aws-support" id="awsSupport"></div>
+            </div>
+
+            <h4 class="blk">Certifications and education</h4>
+            <div class="cred-grid">
+              <ul class="certs">
+                <li class="glow rv"><b>CompTIA Security+</b><span>Security</span></li>
+                <li class="glow rv"><b>Microsoft Azure Fundamentals</b><span>AZ-900</span></li>
+                <li class="glow rv"><b>ServiceNow Certified System Administrator</b><span>CSA</span></li>
+                <li class="glow rv"><b>ITSM with Jira Service Management</b><span>ACA-910</span></li>
+              </ul>
+              <ol class="edu rv">
+                <li><small>2018 &ndash; 2022</small><b>B.Tech, Information Technology</b><span>Kingston Engineering College &middot; CGPA 8.1 / 10</span></li>
+                <li><small>2018</small><b>Higher Secondary Certificate</b><span>65%</span></li>
+                <li><small>2016</small><b>Secondary School Leaving Certificate</b><span>81.6%</span></li>
+              </ol>
+            </div>
+          </div></div>
+        </section>
+
+        <!-- PERSONAL DRAWER -->
+        <section class="drawer" id="drawerPersonal" aria-label="Personal development">
+          <div class="drawer-inner"><div class="drawer-body">
+            <div class="drawer-head">
+              <div><p class="kicker">Personal development</p><h3 class="h2">Projects, learning and life</h3>
+                <p class="lede">Everything I build, learn and love outside the job.</p></div>
+              <button class="close" type="button" data-close>Close</button>
+            </div>
+
+            <h4 class="blk">Personal projects</h4>
+            <p class="lede sm tight">Four apps I designed and shipped, each built with AI support. Three are live and ready to open.</p>
+            <div class="cards" id="cards"></div>
+
+            <div class="scanner" id="scanner">
+              <div>
+                <h3 class="h3">Inside the vulnerability assessment tool</h3>
+                <p class="lede sm">Upload an environment file in JSON. The tool checks every component against the official NIST library, scores the result and generates a report.</p>
+                <ol class="steps" id="steps"></ol>
+              </div>
+              <figure class="report glass" aria-label="Sample scan result preview">
+                <figcaption>Sample report preview</figcaption>
+                <div class="gauge">
+                  <svg viewBox="0 0 200 120" role="img" aria-label="Risk score gauge showing 7.4 out of 10">
+                    <path class="g-track" d="M20 100 A80 80 0 0 1 180 100" pathLength="100"/>
+                    <path class="g-fill" id="gFill" d="M20 100 A80 80 0 0 1 180 100" pathLength="100"/>
+                  </svg>
+                  <div class="g-num"><span id="gNum">0.0</span><small>/ 10 risk score</small></div>
+                </div>
+                <ul class="sev" id="sev"></ul>
+                <button class="btn btn-line btn-sm" id="rescan" type="button">Run the preview again</button>
+              </figure>
+            </div>
+
+            <h4 class="blk">Vibe coding</h4>
+            <div class="quotes" id="quotes"></div>
+
+            <h4 class="blk">Learning: cyber security</h4>
+            <p class="lede sm tight">I learned cyber security on real projects, covering SIEM tools and integration, EDR, security monitoring, WAF and firewalls. It shapes how I look at every production system.</p>
+            <ol class="layers" id="layers"></ol>
+
+            <h4 class="blk">Lifestyle</h4>
+            <div class="bento creative" id="lifestyle"></div>
+
+            <h4 class="blk">Hobbies</h4>
+            <div class="hobbies" id="hobbies"></div>
+
+            <h4 class="blk">Interests</h4>
+            <ul class="chips big" id="interests"></ul>
+
+            <h4 class="blk">Photography</h4>
+            <div class="gallery" id="gallery"></div>
+
+            <h4 class="blk">Films &amp; edits</h4>
+            <div class="reels" id="reels"></div>
+          </div></div>
+        </section>
+      </div>
+    </section>
+
+    <!-- CONNECT -->
+    <section class="section" id="connect" data-section>
+      <div class="wrap">
+        <header class="sec-head"><p class="kicker">Connect</p><h2 class="h2">Find me online.</h2>
+          <p class="lede">Code on GitHub, work history on LinkedIn, and the creative side on YouTube and Instagram.</p></header>
+        <div class="connect-grid" id="socials"></div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact" id="contact" data-section>
+      <div class="wrap">
+        <p class="kicker">Contact</p>
+        <h2 class="h2 huge">Let us build something reliable.</h2>
+        <p class="lede">Open to conversations about reliability engineering, cloud, and creative collaborations.</p>
+        <a class="mail-card glow" href="mailto:deenadayalan779@gmail.com" aria-label="Get in touch: send mail">
+          <span class="mail-ico" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M4 7l8 6 8-6"/></svg></span>
+          <span class="mail-txt"><small>Get in touch</small><strong>Send Mail</strong></span>
+          <span class="arrow" aria-hidden="true"></span>
+        </a>
+        <div class="contact-row">
+          <a class="btn btn-solid magnetic" href="resume.pdf" target="_blank" rel="noopener">View Resume</a>
+          <span class="loc">Based in India</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><span>&copy; <span id="year"></span> Dheena Dhayalan &middot; India</span><a href="#home">Back to top</a></footer>
+
+  <div class="lightbox" id="lightbox" hidden><button class="lb-close" id="lbClose" aria-label="Close image">Close</button><img id="lbImg" alt=""></div>
+  <script src="script.js"></script>
+</body>
+</html>
