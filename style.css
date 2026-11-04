@@ -595,3 +595,12 @@ body {
 .career-next:hover { color: var(--text); border-color: var(--mint); transform: translateY(-2px); }
 .career-next > span { font-size: 1.15em; line-height: 1; }
 @media (max-width: 560px) { .career-next-wrap { align-items: stretch; padding: 17px; } .career-next { width: 100%; } }
+
+/* Compact footage player: native controls provide play and fullscreen */
+.reels { grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 440px)); justify-content: start; }
+.reel { width: 100%; max-width: 440px; aspect-ratio: 16 / 9; }
+.reel video { object-fit: contain; }
+@media (max-width: 560px) {
+  .reels { grid-template-columns: minmax(0, 1fr); }
+  .reel { max-width: 100%; border-radius: 14px; }
+}
