@@ -604,3 +604,10 @@ body {
   .reels { grid-template-columns: minmax(0, 1fr); }
   .reel { max-width: 100%; border-radius: 14px; }
 }
+
+/* Click-to-play poster cards for externally hosted footage */
+.reel-cover { position: absolute; inset: 0; display: grid; place-items: center; width: 100%; height: 100%; overflow: hidden; background: #000; }
+.reel-cover img { width: 100%; height: 100%; object-fit: cover; transition: transform .45s ease; }
+.reel-cover:hover img { transform: scale(1.035); }
+.reel-play { position: absolute; display: grid; place-items: center; width: 62px; height: 62px; padding-left: 4px; border: 1px solid rgba(255,255,255,.65); border-radius: 50%; background: rgba(8,12,22,.72); color: #fff; font-size: 1.25rem; box-shadow: 0 6px 28px rgba(0,0,0,.45); }
+.reel-cover:focus-visible { outline: 3px solid var(--mint); outline-offset: -5px; }
