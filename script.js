@@ -10,6 +10,7 @@ const MEDIA = {
   ],
   reels: [
     { src: "media/Ustad%20Hotel.mov", poster: "media/Ustad%20Hotel.png", title: "Ustad Hotel" },
+    { src: "media/Mahabs%20Sunrise.MOV", poster: "media/Mahabs%20Sunrise.png", title: "Mahabs Sunrise" },
   ],
 };
 
