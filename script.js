@@ -9,8 +9,8 @@ const MEDIA = {
     // { src: "media/photo-1.jpg", alt: "Describe the photo" },
   ],
   reels: [
-    { driveId: "1OBDKh03Af9NEFAYz5pNoH4QD-KVPOm8N", poster: "media/Ustad%20Hotel.png", title: "Ustad Hotel" },
-    { driveId: "1cEe1HetV58My2BBCOfHzBVFJWupwo37L", poster: "media/Mahabs%20Sunrise.png", title: "Mahabs Sunrise" },
+    { src: "media/Ustad%20Hotel.mov", poster: "media/Ustad%20Hotel.png", title: "Ustad Hotel" },
+    { src: "media/Mahabs%20Sunrise.MOV", poster: "media/Mahabs%20Sunrise.png", title: "Mahabs Sunrise" },
   ],
 };
 
@@ -222,16 +222,9 @@ $("#lbClose").addEventListener("click", closeLb); lb.addEventListener("click", e
 addEventListener("keydown", e => { if (e.key === "Escape" && !lb.hidden) closeLb(); });
 if (MEDIA.reels.length) MEDIA.reels.forEach(r => {
   const box = el("div", "reel rv");
-  if (r.driveId) {
-    box.innerHTML = `<video class="portfolio-video" src="https://drive.google.com/uc?export=download&id=${r.driveId}" poster="${r.poster || ""}" controls preload="none" playsinline aria-label="${r.title || "Videography footage"}"></video>`;
-    $("video", box).addEventListener("error", () => {
-      box.innerHTML = `<a class="video-fallback" href="https://drive.google.com/file/d/${r.driveId}/view" target="_blank" rel="noopener">Video playback is unavailable here. Open ${r.title || "video"} in Google Drive <span aria-hidden="true">↗</span></a>`;
-    }, { once: true });
-  } else {
-    box.innerHTML = r.youtube
-      ? `<iframe src="https://www.youtube-nocookie.com/embed/${r.youtube}" title="${r.title || "Film"}" loading="lazy" allowfullscreen></iframe>`
-      : `<video src="${r.src}" ${r.poster ? `poster="${r.poster}"` : ""} controls preload="none" playsinline aria-label="${r.title || "Videography footage"}"></video>`;
-  }
+  box.innerHTML = r.youtube
+    ? `<iframe src="https://www.youtube-nocookie.com/embed/${r.youtube}" title="${r.title || "Film"}" loading="lazy" allowfullscreen></iframe>`
+    : `<video class="portfolio-video" src="${r.src}" ${r.poster ? `poster="${r.poster}"` : ""} controls preload="none" playsinline aria-label="${r.title || "Videography footage"}"></video>`;
   reels.append(box);
 });
 else for (let i = 0; i < 2; i++) reels.append(el("div", "reel empty rv", "<span>Film coming soon</span>"));
