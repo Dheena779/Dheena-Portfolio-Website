@@ -9,7 +9,7 @@ const MEDIA = {
     // { src: "media/photo-1.jpg", alt: "Describe the photo" },
   ],
   reels: [
-    { src: "media/Ustad%20Hotel.mov", title: "Ustad Hotel" },
+    { src: "media/Ustad%20Hotel.mov", poster: "media/Ustad%20Hotel.png", title: "Ustad Hotel" },
   ],
 };
 
