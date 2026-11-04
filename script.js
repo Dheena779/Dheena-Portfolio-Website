@@ -222,10 +222,10 @@ $("#lbClose").addEventListener("click", closeLb); lb.addEventListener("click", e
 addEventListener("keydown", e => { if (e.key === "Escape" && !lb.hidden) closeLb(); });
 if (MEDIA.reels.length) MEDIA.reels.forEach(r => {
   const box = el("div", "reel rv");
-  if (r.driveId && r.poster) {
-    box.innerHTML = `<button class="reel-cover" type="button" aria-label="Play ${r.title || "video"}"><img src="${r.poster}" alt="" loading="lazy"><span class="reel-play" aria-hidden="true">▶</span></button>`;
-    $(".reel-cover", box).addEventListener("click", () => {
-      box.innerHTML = `<iframe src="https://drive.google.com/file/d/${r.driveId}/preview" title="${r.title || "Videography footage"}" allow="autoplay; fullscreen" allowfullscreen></iframe>`;
+  if (r.driveId) {
+    box.innerHTML = `<video class="portfolio-video" src="https://drive.google.com/uc?export=download&id=${r.driveId}" poster="${r.poster || ""}" controls preload="none" playsinline aria-label="${r.title || "Videography footage"}"></video>`;
+    $("video", box).addEventListener("error", () => {
+      box.innerHTML = `<a class="video-fallback" href="https://drive.google.com/file/d/${r.driveId}/view" target="_blank" rel="noopener">Video playback is unavailable here. Open ${r.title || "video"} in Google Drive <span aria-hidden="true">↗</span></a>`;
     }, { once: true });
   } else {
     box.innerHTML = r.youtube

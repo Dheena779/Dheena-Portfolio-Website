@@ -611,3 +611,8 @@ body {
 .reel-cover:hover img { transform: scale(1.035); }
 .reel-play { position: absolute; display: grid; place-items: center; width: 62px; height: 62px; padding-left: 4px; border: 1px solid rgba(255,255,255,.65); border-radius: 50%; background: rgba(8,12,22,.72); color: #fff; font-size: 1.25rem; box-shadow: 0 6px 28px rgba(0,0,0,.45); }
 .reel-cover:focus-visible { outline: 3px solid var(--mint); outline-offset: -5px; }
+
+/* In-page hosted video player and graceful Drive fallback */
+.portfolio-video { object-fit: contain; }
+.video-fallback { position: absolute; inset: 0; display: grid; align-content: center; justify-items: center; gap: 10px; padding: 24px; color: var(--text); text-align: center; background: linear-gradient(145deg, #151d31, #080c16); }
+.video-fallback span { color: var(--mint); font-size: 1.35rem; }
