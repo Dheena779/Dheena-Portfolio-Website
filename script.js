@@ -9,8 +9,7 @@ const MEDIA = {
     // { src: "media/photo-1.jpg", alt: "Describe the photo" },
   ],
   reels: [
-    // { youtube: "VIDEO_ID" },                                  // a YouTube video
-    // { src: "media/film-1.mp4", poster: "media/film-1.jpg" },  // a file you edited
+    { src: "media/Ustad%20Hotel.mov", title: "Ustad Hotel" },
   ],
 };
 
@@ -223,8 +222,8 @@ addEventListener("keydown", e => { if (e.key === "Escape" && !lb.hidden) closeLb
 if (MEDIA.reels.length) MEDIA.reels.forEach(r => {
   const box = el("div", "reel rv");
   box.innerHTML = r.youtube
-    ? `<iframe src="https://www.youtube-nocookie.com/embed/${r.youtube}" title="Film" loading="lazy" allowfullscreen></iframe>`
-    : `<video src="${r.src}" ${r.poster ? `poster="${r.poster}"` : ""} controls preload="none"></video>`;
+    ? `<iframe src="https://www.youtube-nocookie.com/embed/${r.youtube}" title="${r.title || "Film"}" loading="lazy" allowfullscreen></iframe>`
+    : `<video src="${r.src}" ${r.poster ? `poster="${r.poster}"` : ""} controls preload="none" playsinline aria-label="${r.title || "Videography footage"}"></video>`;
   reels.append(box);
 });
 else for (let i = 0; i < 2; i++) reels.append(el("div", "reel empty rv", "<span>Film coming soon</span>"));

@@ -587,3 +587,11 @@ body {
   .hero::before, .hero::after { display: none; }
   .panel { transform: none !important; }
 }
+
+/* Career to personal development navigation */
+.career-next-wrap { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px 22px; margin-top: 34px; padding: 20px 22px; border: 1px solid var(--line); border-radius: 18px; background: linear-gradient(110deg, rgba(165,160,255,.09), rgba(124,244,212,.055)); }
+.career-next-wrap > span { color: var(--muted); }
+.career-next { border-color: rgba(124,244,212,.38); color: var(--mint); }
+.career-next:hover { color: var(--text); border-color: var(--mint); transform: translateY(-2px); }
+.career-next > span { font-size: 1.15em; line-height: 1; }
+@media (max-width: 560px) { .career-next-wrap { align-items: stretch; padding: 17px; } .career-next { width: 100%; } }
